@@ -3,20 +3,47 @@
     <head>
         <title>RJKT_OS</title>
         <meta charset="utf-8">
+        <style>
+            .flexbox-elements {
+                display: flex;
+            }
+            .page-background {
+                background-color: #ffffff;
+            }
+            .headings {
+                text-align: center;
+                font-family: monospace;
+                font-size: x-large;
+                border: solid #000000;
+                box-shadow: 8px 8px 40px 0px rgba(0,0,0,0.5);
+                background-color: #94b0d9;
+            }
+            .sub-headings {
+                text-align: center;
+                font-family: monospace;
+                font-size: xx-large;
+            }
+            .head-banner-image {
+                border: solid #000000;
+                cursor: default;
+                box-shadow: 8px 8px 40px 0px rgba(0,0,0,0.5);
+            }
+        </style>
     </head>
-    <body>
-        <div>
-            <h1><strong>Open Source at Rajkot</strong></h1>
+    <body class="page-background">
+        <div class="headings">
+            <h1><strong>Open Source @ Rajkot</strong></h1>
         </div>
         <div>
-            <figure>
+            <figure class="flexbox-elements">
                 <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/55/Underbridge_Circle_Rajkot.jpg"
-                alt="Rajkot during night">
+                src="sea.jpg"
+                alt="Open source is freedom!"
+                class='head-banner-image'>
             </figure>
         </div>
         <div>
-            <h2>What is RJKT_OS?</h2>
+            <h2 class="sub-headings">What is RJKT_OS?</h2>
             <p>
                 RJKT_OS is an initiative to promote the development of open source computing and to 
                 promote contributions towards the development of open source solutions. RJKT_OS is a 
@@ -25,4 +52,11 @@
                 discussions, food, and fun! Welcome to a world where computing is open!.
             </p>
         </div>
+        <div>
+            <hr>
+            <p>
+                <a href='https://commons.wikimedia.org/wiki/File:Caribbean_Sea_-_Long_Exposure.jpg'>Header image source</a>
+            </p>
+        </div>
     </body>
+</html>
