@@ -9,7 +9,7 @@
     font-family: monospace;
     font-size: x-large;
     border: solid #000000;
-    box-shadow: 8px 8px 40px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
     background-color: #94b0d9;
 }
 .sub-headings {
@@ -20,5 +20,5 @@
 .head-banner-image {
     border: solid #000000;
     cursor: default;
-    box-shadow: 8px 8px 40px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
 }
