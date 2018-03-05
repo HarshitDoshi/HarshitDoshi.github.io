@@ -3,15 +3,21 @@
     <head>
         <title>Harshit Doshi</title>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <style>
-            #main_heading {
-                color: darkblue;
+            .sheet {
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+                padding: 1px;
             }
             .full-body {
-                background-color: #000000;
+                background-color: #ffffff;
             }
             .headings {
+                font-family: serif;
+            }
+            .sub-headings {
                 color: darkgreen;
+                text-decoration: underline;
             }
             .normal-text {
                 color: black;
@@ -19,36 +25,53 @@
             .border {
                 border-style: solid;
             }
+            li {
+                color: #000000;
+                text-decoration:
+            }
         </style>
     </head>
     <body class="border, full-body">
-        <div>
-            <h1 align="center" id="main_heading">Harshit Doshi</h1>
-        </div>
-        <div>
-            <p align="center" class="normal-text">
-                Bengaluru, Karnataka <em>|</em> +91 98 76 543210 <em>|</em> email@example.com
-            </p>
-        </div>
-        <div>
-            <h3 class="headings"><em>> <u>CAREER OBJECTIVES</u>:</em></h3>
-        </div>
-        <div>
-            <h3 class="headings"><em>> <u>EDUCATION</u>:</em></h3>
-        </div>
-        <div>
-            <h3 class="headings"><em>> <u>PROJECTS AND CERTIFICATE COURSES</u>:</em></h3>
-            <ul class="normal-text">
-                <li>Recipient: Google India Challenge Scholarship for the Front-End Web Developer track.</li>
-                <li>Developed a cloud storage system for the university using open source software.</li>
-                <li>Cisco Networking Academy: Introduction To IOT</li>
-                <li>Developed a Mario-like game using Unity3D</li>
-                <li>Android app development using Java and Google Android Studio</li>
-                <li>Graphics design using Inkscape</li>
-              </ul>
-        </div>
-        <div>
-            <h3 class="headings"><em>> <u>ADDITIONAL SKILLS</u>:</em></h3>
-        </div>
+        <figure class="sheet">
+            <div>
+                <h1 align="center" class="headings"><strong>Harshit Doshi</strong></h1>
+            </div>
+            <div>
+                <p align="center" class="normal-text">
+                    Bengaluru, Karnataka <em>|</em> +91 98 76 543210 <em>|</em> email@example.com
+                </p>
+            </div>
+        </figure>
+        <figure class="sheet">
+            <div>
+                <ul>
+                    <li>
+                        <ul class="sub-headings"><em>CAREER OBJECTIVES</em>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-headings"><em>EDUCATION</em>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-headings"><em>PROJECTS AND CERTIFICATE COURSES</em>
+                            <li>Recipient: Google India Challenge Scholarship for the Front-End Web Developer track.</li>
+                            <li>Developed a cloud storage system for the university using open source software.</li>
+                            <li>Cisco Networking Academy: Introduction To IOT</li>
+                            <li>Developed a Mario-like game using Unity3D</li>
+                            <li>Android app development using Java and Google Android Studio</li>
+                            <li>Graphics design using Inkscape</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-headings"><em>ADDITIONAL SKILLS</em>
+                            <li>something</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </figure>
     </body>
 </html>
