@@ -2,7 +2,7 @@
     display: flex;
 }
 .page-background {
-    background-color: #ffffff;
+    background-image: repeating-linear-gradient(#ffccbc, #c5cae9);
 }
 .headings {
     text-align: center;
