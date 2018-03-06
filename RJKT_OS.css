@@ -22,3 +22,6 @@
     cursor: default;
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
 }
+.normal-text {
+    font-family: sans-serif;
+}
