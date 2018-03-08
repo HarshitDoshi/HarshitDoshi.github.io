@@ -2,7 +2,7 @@
     display: flex;
 }
 .page-background {
-    background-image: linear-gradient(#519657, #087f23, #000000);
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 .headings {
     text-align: center;
