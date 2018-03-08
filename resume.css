@@ -16,10 +16,12 @@
 .paper {
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
     padding: 1px;
+    border-radius: 4px;
 }
 .paper-cutout {
     box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.5);
     padding: 1px;
+    border-radius: 4px;
 }
 .center-align-elements {
     text-align: center;
