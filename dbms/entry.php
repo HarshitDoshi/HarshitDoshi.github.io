@@ -28,7 +28,7 @@ mysql_query($sqlQuery);
 	
 	
 	
-	include("link1.php");
+	include("dbms/link1.php");
 	echo $id;
 	
 	
