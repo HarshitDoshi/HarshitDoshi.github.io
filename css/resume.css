@@ -11,11 +11,11 @@
 }
 
 .sticker-color {
-    background-image: repeating-linear-gradient(#ebedee, #fdfbfb)
+    background-image: repeating-linear-gradient(#ebedee, #fdfbfb);
 }
 
 .sticker-color-reverse {
-    background-image: repeating-linear-gradient(#fdfbfb, #ebedee)
+    background-image: repeating-linear-gradient(#fdfbfb, #ebedee);
 }
 
 .cutout-color {
