@@ -1,3 +1,3 @@
 # HarshitDoshi.github.io
 
-Git repo for my personal page at https://harshitdoshi.me
+Git repo for my personal page at https://harshitdoshi.github.io
