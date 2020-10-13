@@ -3,29 +3,17 @@
 :root {
     --base-font-size: 16px;
     --standard-margin: 0 auto;
+    --slim-margin: 0.5vw;
     --standard-padding: 0.5rem;
     --double-padding: calc(var(--standard-padding) * 2);
     --slim-padding: calc(var(--standard-padding) / 5);
-    --background: #fafafa;
-    --text: #212121;
+    --background: rgba(250, 250, 250, 1);
+    --text: rgba(33, 33, 33, 1);
+    --button-text: rgba(250, 250, 250, 1);
+    --shadow-dark: rgba(33, 33, 33, 0.39);
     --sans-serif-font: "IBM Plex Sans", sans-serif;
     --sans-serif-condensed-font: "IBM Plex Sans Condensed";
     --monospace-font: "IBM Plex Mono", monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --base-font-size: 16px;
-        --standard-margin: 0 auto;
-        --standard-padding: 0.5rem;
-        --double-padding: calc(var(--standard-padding) * 2);
-        --slim-padding: calc(var(--standard-padding) / 5);
-        --background: #212121;
-        --text: #fafafa;
-        --sans-serif-font: "IBM Plex Sans", sans-serif;
-        --sans-serif-condensed-font: "IBM Plex Sans Condensed";
-        --monospace-font: "IBM Plex Mono", monospace;
-    }
 }
 
 html {
@@ -33,11 +21,9 @@ html {
 }
 
 body,
-header,
 header nav,
-main,
-section,
 footer,
+p,
 table,
 table caption,
 table td,
@@ -53,39 +39,53 @@ body {
     background-color: var(--background);
     color: var(--text);
     font-family: var(--sans-serif-font);
+    min-height: 100vh;
 }
 
 header,
 footer {
-    padding: var(--double-padding);
     font-weight: bold;
 }
 
 header {
     text-align: start;
+    background-color: var(--primary-theme);
+    padding: var(--slim-padding);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 4px 5px 0 var(--shadow-dark);
 }
 
-header nav a:nth-child(1) {
+.nav-toggle {
     color: var(--text);
     text-decoration: none;
     padding-left: var(--standard-padding);
     padding-right: var(--standard-padding);
+}
+
+.logo {
+    display: inline-block;
+    font-size: clamp(100%, 1rem + 2vw, 2.5rem);
+    color: var(--text);
+    text-decoration: none;
     border: 0.2rem solid var(--text);
+    border-radius: 0.5rem;
 }
 
-header nav a:nth-child(1):link {
+.logo:link {
     color: var(--text);
     text-decoration: none;
-    padding-left: var(--standard-padding);
-    padding-right: var(--standard-padding);
+    padding-left: var(--double-padding);
+    padding-right: var(--double-padding);
 }
 
-header nav a:nth-child(1):visited {
+.logo:visited {
     color: var(--text);
     text-decoration: none;
 }
 
-header nav a:nth-child(1):hover {
+.logo:hover {
     text-decoration: none;
 }
 
@@ -106,17 +106,131 @@ header nav a:hover {
     text-decoration-color: var(--text);
 }
 
+.search-bar form input {
+    padding: var(--standard-padding);
+    margin: var(--standard-margin);
+    background-color: var(--background);
+    border: 0.2rem solid rgba(33, 33, 33, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 14px 0 var(--shadow-dark);
+    box-sizing: border-box;
+    font-size: clamp(100%, 1rem + 2vw, 1rem);
+}
+
+.search-bar form input:focus {
+    padding: var(--standard-padding);
+    margin: var(--standard-margin);
+    background-color: var(--background);
+    border: 0.2rem solid rgba(33, 33, 33, 1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 14px 0 var(--shadow-dark);
+    box-sizing: border-box;
+    font-size: clamp(100%, 1rem + 2vw, 1rem);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6,
 section {
-    max-width: 50rem;
     line-height: 1.25;
 }
 
-article>p {
+.grid-container {
+    display: grid;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.connect-with-us-section {
+    padding: 0rem;
+    margin: 0rem;
+    background-color: thistle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.connect-with-us-content {
+    padding-left: calc(var(--standard-padding) * 5);
+    padding-right: calc(var(--standard-padding) * 5);
+    padding-top: calc(var(--standard-padding) * 10);
+    flex: 1;
+}
+
+.connect-with-us-content form {
+    padding: var(--standard-padding);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.connect-with-us-content form input {
+    padding: var(--standard-padding);
+    margin: var(--slim-margin);
+    background-color: var(--background);
+    border: 0.2rem solid rgba(119, 0, 216, 1);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 14px 0 rgba(119, 0, 216, 0.4);
+    font-size: clamp(100%, 1rem + 2vw, 1rem);
+    flex: 3;
+}
+
+.connect-with-us-content form input:focus {
+    padding: var(--standard-padding);
+    margin: var(--slim-margin);
+    background-color: var(--background);
+    border: 0.2rem solid rgba(119, 0, 216, 1);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 14px 0 rgba(119, 0, 216, 0.4);
+    font-size: clamp(100%, 1rem + 2vw, 1rem);
+    flex: 3;
+}
+
+.connect-with-us-content form button {
+    background-color: rgba(119, 0, 216, 1);
+    color: var(--background);
+    border-radius: 0.5rem;
+    border: 0.2rem solid transparent;
+    box-shadow: 0 4px 14px 0 rgba(119, 0, 216, 0.4);
+    padding-left: calc(var(--double-padding) * 3);
+    padding-right: calc(var(--double-padding) * 3);
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    margin: var(--slim-margin);
+    font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+    flex: 1;
+}
+
+.connect-with-us-content h1 {
+    padding-top: var(--standard-padding);
+    padding-left: var(--standard-padding);
+    padding-right: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    margin: var(--standard-margin);
+    color: var(--text);
+    font-family: "Zilla Slab Highlight", cursive;
+    font-size: clamp(100%, 3rem + 2vw, 3rem);
+}
+
+.connect-with-us-content p {
+    padding-top: var(--standard-padding);
+    padding-left: var(--standard-padding);
+    padding-right: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    margin: var(--standard-margin);
+    font-family: "Suez One", serif;
+    font-size: clamp(100%, 3rem + 2vw, 3rem);
+}
+
+article > p {
     max-width: 50rem;
     margin: var(--standard-margin);
     padding: var(--standard-padding);
@@ -136,8 +250,8 @@ h1 {
     font-size: clamp(100%, 3rem + 2vw, 3rem);
 }
 
-article>p>time,
-article>p>span {
+article > p > time,
+article > p > span {
     font-style: italic;
     font-weight: bold;
 }
