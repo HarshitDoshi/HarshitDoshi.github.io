@@ -25,9 +25,9 @@ const Header = () => {
           </a>
           <nav class="md:mx-4 flex flex-wrap items-center text-base justify-center">
             <Link to="/"><div class="mx-2 hover:text-gray-400">Home</div></Link>
-            <Link to="/blog"><a class="mx-2 hover:text-gray-400">Blog</a></Link>
-            <Link to="/about"><a class="mx-2 hover:text-gray-400">About</a></Link>
-            <Link to="/contact"><a class="mx-2 hover:text-gray-400">Contact</a></Link>
+            <Link to="/blog"><div class="mx-2 hover:text-gray-400">Blog</div></Link>
+            <Link to="/about"><div class="mx-2 hover:text-gray-400">About</div></Link>
+            <Link to="/contact"><div class="mx-2 hover:text-gray-400">Contact</div></Link>
           </nav>
         </div>
         <div className="flex flex-row justify-center items-center">
