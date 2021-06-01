@@ -6,7 +6,7 @@ const Alert = (props) => {
 
   const alertContent = children ? children : `This is a ${type} alert.`;
 
-  if (type == "primary") {
+  if (type === "primary") {
     return (
       <div className="border border-blue-300 rounded bg-blue-100 shadow mx-2 my-2">
         <p className="mx-2 my-2 font-sans text-blue-800">{alertContent}</p>
