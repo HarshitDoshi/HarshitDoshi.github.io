@@ -6,13 +6,13 @@ function Blog() {
 
   return (
     <div>
-      <h2>Blog</h2>
+      <h2 className="font-sans text-xl font-black">Blog</h2>
       <ul>
         <li>
-          <Link to={`${match.url}/winning-the-startup-game`}>Start-up Game Triumph</Link>
+          <Link to={`${match.url}/example-post-1`}>Example Post 1</Link>
         </li>
         <li>
-          <Link to={`${match.url}/monitoring-the-art-of-the-digital-eagles`}>Monitoring: The Art of the digital Eagles</Link>
+          <Link to={`${match.url}/example-post-1`}>Example Post 2</Link>
         </li>
       </ul>
       <Switch>

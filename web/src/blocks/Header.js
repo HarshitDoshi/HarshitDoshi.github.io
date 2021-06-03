@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/logos/Logo_Horizontal.svg";
 
 const Header = () => {
@@ -17,22 +17,22 @@ const Header = () => {
     }
   };
   return (
-    <header className="text-green-600 body-font shadow-lg border-b-2 border-gray-800 bg-gray-900">
-      <div className="flex flex-wrap px-4 flex-row md:flex-row items-center justify-between">
+    <header className="text-gray-900 dark:text-gray-50 body-font shadow-lg border-b-2 border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 dark:shadow-none">
+      <div className="flex flex-wrap px-4 py-2 flex-row md:flex-row items-center justify-between">
         <div className="flex flex-wrap flex-row md:flex-row items-center justify-between">
-          <a href="google.com" className="flex title-font font-medium items-center text-gray-200">
-            <img src={logo} className="object-contain w-24 filter invert" alt="A logo for Harshit Doshi with the digits 0 and 1 seperated from the letters H, P and D using a vertical black bar."></img>
-          </a>
+          <Link exact to="/" className="flex title-font font-black text-2xl font-mono items-center text-gray-900 dark:text-gray-50 p-2 border-2 border-gray-100 dark:border-gray-800 rounded-md shadow">
+            Harshit Doshi
+          </Link>
           <nav class="md:mx-4 flex flex-wrap items-center text-base justify-center">
-            <Link to="/"><div class="mx-2 hover:text-gray-400">Home</div></Link>
-            <Link to="/blog"><div class="mx-2 hover:text-gray-400">Blog</div></Link>
-            <Link to="/about"><div class="mx-2 hover:text-gray-400">About</div></Link>
-            <Link to="/contact"><div class="mx-2 hover:text-gray-400">Contact</div></Link>
+            <NavLink exact to="/" activeClassName="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-50 px-2 py-1 rounded-full border border-gray-200 dark:border-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 shadow-lg" className="hover:shadow-lg px-2 py-1 mx-2 border border-gray-50 dark:border-gray-900 hover:text-gray-900 dark:hover:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border hover:border-gray-200 dark:hover:border-gray-900 rounded-full font-bold">🏡 Home</NavLink>
+            <NavLink to="/blog" activeClassName="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-50 px-2 py-1 rounded-full border border-gray-200 dark:border-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 shadow-lg" className="hover:shadow-lg px-2 py-1 mx-2 border border-gray-50 dark:border-gray-900 hover:text-gray-900 dark:hover:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border hover:border-gray-200 dark:hover:border-gray-900 rounded-full font-bold">🧠 Blog</NavLink>
+            <NavLink to="/about" activeClassName="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-50 px-2 py-1 rounded-full border border-gray-200 dark:border-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 shadow-lg" className="hover:shadow-lg px-2 py-1 mx-2 border border-gray-50 dark:border-gray-900 hover:text-gray-900 dark:hover:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border hover:border-gray-200 dark:hover:border-gray-900 rounded-full font-bold">👨🏻‍💻 About</NavLink>
+            <NavLink to="/contact" activeClassName="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-50 px-2 py-1 rounded-full border border-gray-200 dark:border-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 shadow-lg" className="hover:shadow-lg px-2 py-1 mx-2 border border-gray-50 dark:border-gray-900 hover:text-gray-900 dark:hover:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border hover:border-gray-200 dark:hover:border-gray-900 rounded-full font-bold">📧 Contact</NavLink>
           </nav>
         </div>
         <div className="flex flex-row justify-center items-center">
-          <input onChange={handleChange} value={searchPhrase.search_phrase} type="text" name="search_phrase" id="search_phrase" autoComplete="search_phrase" placeholder="Enter keyword..." className="mx-2 shadow items-center text-gray-100 bg-gray-900 py-1 px-2 border border-blue-600 hover:bg-gray-900 focus:bg-gray-900 hover:text-gray-200 rounded text-base font-mono"></input>
-          <button onClick={handleSubmit} className="shadow flex flex-row items-center text-white bg-blue-600 border border-blue-600 py-1 px-4 focus:outline-none hover:bg-blue-800 rounded text-base">Search</button>
+          <input onChange={handleChange} value={searchPhrase.search_phrase} type="text" name="search_phrase" id="search_phrase" autoComplete="search_phrase" placeholder="Enter keyword..." className="mx-2 hover:shadow-lg focus:shadow-lg items-center text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-gray-900 py-1 px-2 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:bg-gray-50 dark:focus:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 focus:border-gray-200 dark:focus:border-gray-700 focus:outline-none rounded-full text-base font-mono"></input>
+          <button onClick={handleSubmit} className="hover:shadow-lg flex flex-row items-center text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-1 px-4 focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 rounded-full text-base">🔎 Search</button>
         </div>
       </div>
     </header>

@@ -1,10 +1,27 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx,vue}', './public/index.html', './public/**/*.html',],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '60%': '60%',
+    },
+    extend: {
+      colors: {
+        'hdblue': '#0F7B92',
+      },
+      backgroundImage: theme => ({
+        'developer-isometric': "url('../assets/illustrations/dev-iso.svg')",
+        'developer-3d': "url('../assets/illustrations/developer.svg')",
+        'black-art': "url('../assets/illustrations/black-art.svg')",
+      })
+    },
   },
   variants: {
+    animation: ['responsive', 'motion-safe', 'motion-reduce'],
     extend: {},
   },
   plugins: [],
