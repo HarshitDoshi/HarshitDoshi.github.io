@@ -17,6 +17,7 @@ module.exports = {
         'developer-isometric': "url('../assets/illustrations/dev-iso.svg')",
         'developer-3d': "url('../assets/illustrations/developer.svg')",
         'black-art': "url('../assets/illustrations/black-art.svg')",
+        'graph-paper': "url('../assets/illustrations/graph-paper.svg')",
       })
     },
   },
