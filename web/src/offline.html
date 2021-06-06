@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harshit Doshi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .offline-section {
+      --tw-text-opacity: 1;
+      color: rgba(156, 163, 175, var(--tw-text-opacity));
+      --tw-bg-opacity: 1;
+      background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .offline-section-dev {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .offline-illustration {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0.25rem;
+      margin-bottom: 2.5rem;
+      width: 83.333333%;
+    }
+
+    .offline-content {
+      text-align: center;
+      width: 100%;
+    }
+
+    .offline-content h1 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      margin-bottom: 1rem;
+      --tw-text-opacity: 1;
+      color: rgba(255, 255, 255, var(--tw-text-opacity));
+      font-weight: 500;
+    }
+
+    .offline-content p {
+      margin-bottom: 2rem;
+      line-height: 1.625;
+    }
+
+    .offline-reload-button-div {
+      display: flex;
+      justify-content: center;
+    }
+
+    .offline-reload-button {
+      display: inline-flex;
+      --tw-text-opacity: 1;
+      color: rgba(255, 255, 255, var(--tw-text-opacity));
+      background-color: #0F7B92;
+      border-width: 0px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      border-radius: 0.25rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .offline-reload-button::focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    .offline-reload-button::hover {
+      background-color: #F3F3F3;
+      color: #000000;
+    }
+
+    @media (min-width: 640px) {
+      .offline-content h1 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .offline-illustration {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .offline-illustration {
+        width: 33.333333%;
+      }
+
+      .offline-content {
+        width: 66.666667%;
+      }
+    }
+
+    @media (min-width: 1280px) {}
+
+    @media (min-width: 1536px) {}
+  </style>
+</head>
+
+<body>
+  <section class="offline-section">
+    <div class="offline-section-dev">
+      <img class="offline-illustration" alt="hero" src="/src/assets/illustrations/offline.svg">
+      <div class="offline-content">
+        <h1>Aww shucks!</h1>
+        <p>
+          It looks like you are offline. Maybe mom switched off the wi-fi by mistake? It might be dad trying to
+          run away from harmful radio-waves!
+        </p>
+        <div class="offline-reload-button-div">
+          <button type="button" class="offline-reload-button">Reload</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.querySelector("button").addEventListener("click", () => {
+      window.location.reload();
+    });
+
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+
+    async function checkNetworkAndReload() {
+      try {
+        const response = await fetch('.');
+        if (response.status >= 200 && response.status < 500) {
+          window.location.reload();
+          return;
+        }
+      } catch { }
+      window.setTimeout(checkNetworkAndReload, 2500);
+    }
+
+    checkNetworkAndReload();
+  </script>
+</body>
+
+</html>

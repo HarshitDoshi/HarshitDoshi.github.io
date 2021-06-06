@@ -3,12 +3,12 @@
   "name": "Harshit Doshi",
   "icons": [
     {
-      "src": "/assets/icons/192_HD-Icon.png",
+      "src": "../src/assets/icons/192_HD-Icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/icons/512_HD-Icon.png",
+      "src": "../src/assets/icons/512_HD-Icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -20,16 +20,5 @@
   "theme_color": "#111827",
   "shortcuts": [],
   "description": "Harshit Doshi",
-  "screenshots": [
-    {
-      "src": "/images/screenshot1.png",
-      "type": "image/png",
-      "sizes": "540x720"
-    },
-    {
-      "src": "/images/screenshot2.jpg",
-      "type": "image/jpg",
-      "sizes": "540x720"
-    }
-  ]
+  "screenshots": []
 }

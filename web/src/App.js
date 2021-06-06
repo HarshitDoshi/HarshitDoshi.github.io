@@ -1,12 +1,13 @@
 import Footer from "./blocks/Footer";
 import Header from "./blocks/Header";
-import About from "./pages/About";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./blocks/Main";
 import Lab from "./pages/Lab";
+import Offline from "./pages/response_pages/Offline";
 
 function App() {
   return (
@@ -15,11 +16,14 @@ function App() {
         <Header headerTitle="Harshit Doshi" />
         <Main>
           <Switch>
+            <Route path="/offline">
+              <Offline />
+            </Route>
             <Route path="/lab">
               <Lab />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/projects">
+              <Projects />
             </Route>
             <Route path="/contact">
               <Contact />
