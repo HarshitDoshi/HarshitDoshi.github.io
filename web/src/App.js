@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col h-screen">
-        <Header headerTitle="Harshit Doshi" />
+        <Header />
         <Main>
           <Switch>
             <Route path="/offline">
