@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import Work from "./components/Work";
-import Lab from "./components/Lab";
+
+import Home from "./components/pages/Home";
+import Blog from "./components/pages/Blog";
+import Contact from "./components/pages/Contact";
+import Work from "./components/pages/Work";
+import Lab from "./components/pages/Lab";
 
 function App() {
   return (
