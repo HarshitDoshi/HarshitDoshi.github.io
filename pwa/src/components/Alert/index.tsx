@@ -33,19 +33,9 @@ const Alert = (props: AlertProps) => {
     return <WarningAlert alertContent={alertContent} />;
   } else if (variant === "information") {
     return <InformationAlert alertContent={alertContent} />;
+  } else {
+    return <PrimaryAlert alertContent={alertContent} />;
   }
-
-  return (
-    <div className="flex flex-row justify-center items-center w-full">
-      <div className="border border-gray-900 dark:border-gray-50 rounded shadow mx-2 my-1 w-full">
-        <div className="mx-2 my-2">
-          <>
-            {alertContent}
-          </>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 export default Alert;

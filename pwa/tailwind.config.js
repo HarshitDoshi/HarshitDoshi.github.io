@@ -1,11 +1,22 @@
 // tailwind.config.js
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '60%': '60%',
+    },
+    extend: {
+      colors: {
+        'color-primary': '#0F7B92',
+      },
+    },
   },
   variants: {
+    animation: ['responsive', 'motion-safe', 'motion-reduce'],
     extend: {},
   },
   plugins: [],
