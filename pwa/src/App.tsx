@@ -18,10 +18,10 @@ function App() {
         <Main>
           <Switch>
             <Route path="/lab">
-              <Lab />
-            </Route>
-            <Route path="/work">
               <Work />
+            </Route>
+            <Route path="/projects">
+              <Lab />{/* <Work /> */}
             </Route>
             <Route path="/contact">
               <Contact />
