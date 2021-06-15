@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import { HiSearch, HiOutlineFingerPrint, HiOutlineX } from "react-icons/hi";
 import SearchBar from './SearchBar';
 import TextLogo from './TextLogo';
@@ -10,9 +11,7 @@ const Header = () => {
       <div className="flex flex-wrap my-2 flex-col  md:flex-row items-start md:items-center justify-between">
         <div className="flex flex-wrap flex-col md:flex-row items-center md:items-center justify-between w-full">
           <div className="flex flex-row justify-between items-center w-full">
-            <button onClick={() => {
-              console.log("Portal");
-            }} className="mx-4"><HiOutlineFingerPrint className="md:hidden h-8 w-8 text-gray-900 dark:text-gray-50" /></button>
+            <Link to="/sign-in" className="mx-4"><HiOutlineFingerPrint className="md:hidden h-8 w-8 text-gray-900 dark:text-gray-50" /></Link>
             <TextLogo logoTitle="Harshit Doshi" />
             <button onClick={() => {
               setSearchBarState(!searchBarState);

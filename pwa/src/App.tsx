@@ -9,14 +9,18 @@ import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
 import Work from "./components/pages/Work";
 import Lab from "./components/pages/Lab";
+import SignX from "./components/pages/SignX";
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-screen max-h-screen">
         <Header />
         <Main>
           <Switch>
+            <Route path="/sign-in">
+              <SignX />
+            </Route>
             <Route path="/lab">
               <Work />
             </Route>
