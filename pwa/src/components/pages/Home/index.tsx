@@ -2,7 +2,15 @@ import DeveloperIllustration from "../../../assets/illustrations/DeveloperIllust
 
 function Home() {
   return (
-    <>
+    <div className="flex flex-col-reverse md:flex-row justify-start md:justify-center items-center w-full h-full">
+      <div className="flex flex-col justify-center items-center w-full md:h-full md:w-1/2 text-material-grey-9">
+        Hello, world!
+      </div>
+    </div>
+  );
+}
+
+{/* <>
       <div className="flex flex-col-reverse md:flex-row justify-start md:justify-center items-center w-full h-full">
         <div className="flex flex-col justify-center items-center w-full md:h-full md:w-1/2">
           <div className="md:w-10/12 shadow-lg graph-background dark:bg-gray-900 rounded-lg px-4 py-4 mx-2 my-6 border border-gray-200 dark:border-gray-700">
@@ -30,8 +38,6 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
-  );
-}
+    </> */}
 
 export default Home;

@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import Drawer from "./components/Drawer";
 
 import Home from "./components/pages/Home";
 import Blog from "./components/pages/Blog";
@@ -12,10 +14,12 @@ import Lab from "./components/pages/Lab";
 import SignX from "./components/pages/SignX";
 
 function App() {
+  const [navigationDrawerState, setNavigationDrawerState] = useState(false);
   return (
     <Router>
       <div className="flex flex-col h-screen max-h-screen">
-        <Header />
+        <Drawer drawerState={navigationDrawerState} />
+        <Header drawerState={navigationDrawerState} drawerController={setNavigationDrawerState} />
         <Main>
           <Switch>
             <Route path="/sign-in">

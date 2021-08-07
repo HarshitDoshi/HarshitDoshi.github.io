@@ -8,7 +8,7 @@ const TextLogo = (props: TextLogoProps) => {
   const { logoTitle } = props;
   return (
     <div className="flex flex-row justify-center items-center text-center">
-      <Link to="/" className="flex flex-row justify-center title-font font-black text-xl font-mono items-center text-gray-900 dark:text-gray-50 p-2 border-2 border-gray-100 dark:border-gray-800 rounded-md shadow">
+      <Link to="/" className="flex flex-row justify-center title-font font-black text-lg lg:text-xl font-mono items-center text-material-grey-9 dark:text-material-grey-0 p-1 lg:p-2 border-2 border-material-grey-1 dark:border-material-grey-8 rounded-md shadow">
         {logoTitle}
       </Link>
     </div>
