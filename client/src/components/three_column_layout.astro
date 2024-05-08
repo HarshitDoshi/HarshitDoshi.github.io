@@ -1,0 +1,20 @@
+---
+import Head from "../components/head.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<Head title={title} />
+	<body>
+		<Header />
+		<main>
+            <article style="display: flex; overflow-x: scroll; overflow-y: hidden;">
+                <slot />
+            </article>
+        </main>
+		<Footer />
+	</body>
+</html>

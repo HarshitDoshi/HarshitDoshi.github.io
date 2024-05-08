@@ -1,0 +1,70 @@
+---
+import ThreeColumnLayout from "../components/three_column_layout.astro";
+import TaskList from "../components/task_list.astro";
+import type TaskType from "../types/TaskType";
+
+export const tasks: TaskType[] = [
+    {
+        task: "Buy milk",
+        status: "DO",
+    },
+    {
+        task: "Make presentation on whales",
+        status: "DOING",
+    },
+    {
+        task: "Wash the car",
+        status: "DONE",
+    },
+    {
+        task: "Do the laundry",
+        status: "DO",
+    },
+    {
+        task: "Take medicine",
+        status: "DO",
+    },
+    {
+        task: "Download the latest archives",
+        status: "DOING",
+    },
+    {
+        task: "Sign-up for the run club",
+        status: "DONE",
+    },
+    {
+        task: "Deposit project fees at the bank",
+        status: "DONE",
+    },
+    {
+        task: "Clean the tank",
+        status: "DOING",
+    },
+];
+
+const taskTypesList: {
+    tag: string;
+    icon: string;
+}[] = [
+    {
+        tag: "DO",
+        icon: "🔴",
+    },
+    {
+        tag: "DOING",
+        icon: "🔵",
+    },
+    {
+        tag: "DONE",
+        icon: "🟢",
+    },
+];
+---
+
+<ThreeColumnLayout title="Productivity">
+    {
+        taskTypesList.map((type) => {
+            return <TaskList type={type} tasks={tasks.filter(task => task.status === type.tag)} />;
+        })
+    }
+</ThreeColumnLayout>

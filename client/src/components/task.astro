@@ -1,0 +1,44 @@
+---
+import type TaskType from "../types/TaskType";
+
+const taskProp = Astro.props;
+
+const { task, status } = taskProp as TaskType;
+
+const taskHandler = (event: any) => {
+    console.log(event.target.attributes);
+};
+---
+
+<li
+    style="list-style: none; margin: 0 auto; display: flex;"
+>
+    {
+        status === "DO" ? (
+            <button
+                x-data={`{ taskHandler: ${taskHandler}, task: ${`${task}`}, status: ${`${status}`} }`}
+                x-on:click="taskHandler"
+                style="margin-right: 0.5rem; background-color: transparent; border: none; font-weight: bold; font-size: 1rem;"
+            >
+                {"DOING >"}
+            </button>
+        ) : status === "DOING" ? (
+            <>
+                <button style="margin-right: 0.5rem; background-color: transparent; border: none; font-weight: bold; font-size: 1rem;">
+                    {"< DO"}
+                </button>
+                <button style="margin-right: 0.5rem; background-color: transparent; border: none; font-weight: bold; font-size: 1rem;">
+                    {"DONE >"}
+                </button>
+            </>
+        ) : status === "DONE" ? (
+            <button style="margin-right: 0.5rem; background-color: transparent; border: none; font-weight: bold; font-size: 1rem;">
+                {"< DOING"}
+            </button>
+        ) : (
+            <button>.</button>
+        )
+    }
+    {" | "}
+    {task}
+</li>

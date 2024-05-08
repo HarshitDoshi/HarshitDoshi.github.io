@@ -1,0 +1,19 @@
+---
+const tabs = [
+    { title: "B L O G", path: "#" },
+    { title: "W O R K", path: "/work" },
+    { title: "C O N T A C T", path: "#" },
+    { title: "P R O D U C T I V I T Y", path: "/productivity" },
+];
+---
+
+<header>
+    <nav role="navigation">
+        <a href="/">Harshit Doshi</a>
+        {
+            tabs.map((tab: { title: string; path: string }) => {
+                return <a href={tab.path}>{tab.title}</a>;
+            })
+        }
+    </nav>
+</header>
